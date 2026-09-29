@@ -1,66 +1,81 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laporan Tugas Pertemuan 2
+Disusun Oleh:
+<br>
+<table>
+    <tbody>
+        <tr>
+            <td>
+                Nama:
+            </td>
+            <td>
+                Muhamad Edvin Hidayat
+            </td>
+        </tr>
+        <tr>
+           <td>
+                NPM:
+            </td>
+            <td>
+                4524210054
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Kelas:
+            </td>
+            <td>
+                Prak PBW A
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Pembuatan View
+### Base Layout
+Proses base layout dibuat sebagai template bagi keseluruhan halaman. File ini memuat cdn tailwindcss, navbar, dan juga footer
+<img width="1734" height="834" alt="image" src="https://github.com/user-attachments/assets/161100fd-37f1-4faf-b1d9-5ab85c8c2913" />
+### Home Page
+Halaman ini memuat informasi mengenai halaman awal atau home bagi pengguna yang akan mengakses url / atau /home
+<img width="1724" height="938" alt="image" src="https://github.com/user-attachments/assets/f184002c-9839-4955-bab6-1589344d0ea5" />
+<img width="1919" height="871" alt="image" src="https://github.com/user-attachments/assets/5a646225-bd52-420c-a595-cd4a3efba76f" />
 
-## About Laravel
+### Tentang Kami
+Halaman ini memuat informasi mengenai apa itu projek larapress
+<img width="1918" height="947" alt="image" src="https://github.com/user-attachments/assets/c5f1d4c5-f561-4da5-bd9b-efd1e0ff6ea1" />
+<img width="1919" height="869" alt="image" src="https://github.com/user-attachments/assets/d8ebbcd5-9aba-4d55-9ea9-4a4d84557bb5" />
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Kontak
+Halaman ini memuat mengenai identitas pembuat dan juga kontak pembuat yang dapat dihubungi
+<img width="1834" height="930" alt="image" src="https://github.com/user-attachments/assets/c5534b95-566e-4d4a-9ee5-0ac4c85fd2eb" />
+<img width="1918" height="858" alt="image" src="https://github.com/user-attachments/assets/d097e8ef-50b3-4dc7-857e-6eaf7ffb0737" />
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Konfigurasi URL pada web.php
+Keseluruhan konfigurasi yang ada pada web.php ini berfungsi untuk mendefinisikan url dengan fungsi/view apa yang ingin dituju pada url tersebut.
+<img width="1857" height="471" alt="image" src="https://github.com/user-attachments/assets/9fd67c8e-b57d-436a-991d-4135b3d6c5f1" />
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Penggunaan Blade Syntax
+Terdapat beberapa penggunaan blade syntax pada projek ini seperti
+- yield() <br>
+  Kode ini berfungsi untuk menentukan dimana letak sintaks dinamis yang akan dimuat. Sintaks dinamis disini adalah sintaks yang ada di file view dan diawali extends() dan juga sections()
+- extends() <br>
+  Kode ini berfungsi untuk menghubungkan antara file yang sedang dikelola dengan file base, dimana pada konteks projek ini file base ada pada layouts/base.blade.php
+- sections() <br>
+  Kode ini berfungsi untuk menghubungkan antara code html dinamis yang nantinya akan dimuat pada bagian yield() yang telah didefinisikan sebelumnya pada base file
+- route() <br>
+  Kode ini berfungsi untuk mengenerate url yang telah didefinisikan sebelumnya pada web.php
+- asset() <br>
+  kode ini berfungsi untuk memuat file-file static yang di tempatkan pada folder public/
 
-## Learning Laravel
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
-### Premium Partners
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
