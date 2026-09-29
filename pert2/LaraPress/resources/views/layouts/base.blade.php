@@ -8,9 +8,9 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    <nav class="w-full px-20 py-2 h-10 bg-white shadow-md flex items-center justify-between">
+    <nav class="w-full px-20 py-2 h-15 bg-white shadow-md flex items-center justify-between">
         <div class="text-lg flex justify-start">
-            <h1 class="text-lg font-bold">
+            <h1 class="text-xl font-bold">
                 <a href="{{route("home")}}">LaraPress</a>
             </h1>
         </div>
@@ -26,7 +26,7 @@
     </div>
 
     <footer class="w-full px-20 py 2 h-10 flex items-center bg-white fixed bottom-0 inset-shadow-sm justify-center">
-        <p>Copyright By</p>
+        <p>Copyright By &copy; Humanis 2026</p>
     </footer>
 </body>
 </html>
