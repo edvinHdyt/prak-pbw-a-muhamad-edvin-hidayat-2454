@@ -12,7 +12,7 @@ Aplikasi website sekolah berbasis Laravel yang menampilkan informasi kegiatan se
   <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite">
 </p>
 
-## Instalasi
+ ## Instalasi
 
 ### 1. Clone Repository
 
@@ -23,7 +23,7 @@ cd smpmentari
 
 ### 2. Install Dependencies
 
-```bash
+```bash    
 # Install PHP dependencies
 composer install
 
