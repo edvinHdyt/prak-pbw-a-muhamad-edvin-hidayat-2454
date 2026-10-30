@@ -1,66 +1,207 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laporan Tugas Pertemuan 5 Prak Pemorgraman Berbasis Web
+Disusun Oleh:
+<br>
+<table>
+    <tbody>
+        <tr>
+            <td>
+                Nama:
+            </td>
+            <td>
+                Muhamad Edvin Hidayat
+            </td>
+        </tr>
+        <tr>
+           <td>
+                NPM:
+            </td>
+            <td>
+                4524210054
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Kelas:
+            </td>
+            <td>
+                Prak PBW A
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Authbook - Aplikasi Pengelolaan Buku
+<b>Authbook</b> Merupakan aplikasi berbasis web yang dikembangkan untuk mempermudah proses pengelolaan koleksi buku dan informasi penulis. Proyek ini menggunakan arsitektur Laravel 12 sebagai framework utaman dan Filament 3.x untuk membangun panel administrasi yang praktis dan mudah digunakan.
 
-## About Laravel
+# Daftar Isi
+1. <a href="https://github.com/edvinHdyt/prak-pbw-a-muhamad-edvin-hidayat-2454/edit/main/Pert5/authbook#fitur-aplikasi"> Fitur Aplikasi </a>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+# Fitur Aplikasi
+1. Halaman Autentikasi (Login dan Register)
+2. Panel admin
+3. Pengelolaan Data buku
+4. Pengelolaan Data Penulis
+5. Database Seeder
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+# Teknologi yang Digunakan
+<table>
+    <thead>
+        <th>Teknologi</th>
+        <th>Kegunaan</th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                PHP 8.3+
+            </td>
+            <td>
+                Dasar bahasa pemrograman Laavel
+            </td>
+        </tr>
+        <tr>
+           <td>
+                Laravel 12
+            </td>
+            <td>
+                Framework pengembangan website
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Filament 3.x
+            </td>
+            <td>
+                Framewok panel admin
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Mysql
+            </td>
+            <td>
+                Basis Data
+            </td>
+        </tr>
+         <tr>
+            <td>
+                Composer
+            </td>
+            <td>
+                Manajemen dependensi PHP
+            </td>
+        </tr>
+         <tr>
+            <td>
+                Git dan Github
+            </td>
+            <td>
+                Pengelolaan pengembangan kode
+            </td>
+        </tr>
+         <tr>
+            <td>
+                Laragon
+            </td>
+            <td>
+                Lingkungan server Mysql
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+# Instalasi Proyek
+1. Pengunduhan Soruce Code<br>
+Pengunduhan source code dengan cara cloning melalui repositori github
+```bash
+git clone https://github.com/edvinHdyt/prak-pbw-a-muhamad-edvin-hidayat-2454.git
+cd authbook
+```
+2. Instal Dependensi<br>
+Penginstalan dependensi dilakukan agar Laravel dapat berjalan
+```bash
+composer install
+```
+3. Menyiapkan File Environment<br>
+Copy file .env dari .env.exemple
+```bash
+copy .env.example .env
+```
+Selanjutnya, konfiguasi ulang file .env pada bagian bagian berikut:
+```bash
+APP_NAME=Authbook
+APP_URL=http://127.0.0.1:8000
 
-## Learning Laravel
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=authbook
+DB_USERNAME={sesuaikan usernama database anda}
+DB_PASSWORD=
+```
+Pastikan mysql pada largon/xampp telah berjalan.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+4. Membuat Application Key<br>
+Perintah berikut digunakan untuk membuat kunci aplikasi pada laravel
+```bash
+php artisan key:generate
+```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+5. Migrasi Database <br>
+Jalankan migrasi dan seeder untuk membuat table dan memasukan data dummy pada database.
+```
+php atisan migrate:fresh --seed
+```
+<b>Perhatian</b>: Perintah migrasi ini akan menghapus keseluruhan data yang telah ada pada database.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+6. Mengaktifkan Penyimpanan File-File static<br>
+File file static (seperti gambar) dipelukan dalam website ini, jadi agar file-file tersebut dapat terbaca guanakan perintah berikut
+```
+php artisan stoage:link
+```
+7. Pembuatan User dengan Filament<br>
+Filament memungkinkan untuk membuat pengguna yang telah siap pakai, untuk melakukannya jalankan perintah berikut
+```
+php artisan make:filament-user
+```
+Ikuti instruksi pada terminal untuk memasukan nama, email, dan kata sandi (kata sandi tidak akan terlihat jadi pastikan memasukannya dengan baik)
+8. Menjalankan Server <br>
+Agar aplikasi dapat berjalan pada webiste, diperlukan web sever untuk menjalankannya.
+```
+php artisan serve
+```
+Masukan alamat berikut pada browser:
+- Halaman admin: http://127.0.0.1:8000/admin
+- Halaman Login: http://127.0.0.1:8000/admin/login
 
-## Laravel Sponsors
+# Informasi Akun Pengguna
+Selain akun yang telah dibuat secara filament sebelumnya, terdapat akun pengguna yang telah dibuat dengan menggunakan seeder. Berikut adalah akunnya.
+<table>
+<thead>
+    <th>Keterangan</th>
+    <th>Informasi</th>
+</thead>
+<tbody>
+    <tr>
+    <td>Email</td>
+    <td>admin@example.com</td>
+    <tr>
+    <tr>
+    <td>Password</td>
+    <td>password</td>
+    </tr>
+ </tbody>
+ </table>  
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+# Hasil Output
+1. Halaman Login <br>
+![alt text](image.png)
+2. Halaman Dashboard Admin<br>
+![alt text](image-1.png)
+3. Halaman Kelola Buku<br>
+![alt text](image-5.png)
+4. Halaman Tambah Buku<br>
+![alt text](image-6.png)
+5. Fitur Pencaian Buku <br>
+![alt text](image-7.png)
+6. Fitur Filte buku <br>
+![alt text](image-8.png)
