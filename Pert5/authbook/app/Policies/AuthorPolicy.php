@@ -29,7 +29,7 @@ class AuthorPolicy
      */
     public function create(User $user): bool
     {
-        return true;
+        return $user->role === "admin" || $user->role === "staff";
     }
 
     /**
@@ -37,7 +37,7 @@ class AuthorPolicy
      */
     public function update(User $user, Author $author): bool
     {
-        return true;
+        return $user->role === "admin" || $user->role === "staff";
     }
 
     /**
@@ -45,7 +45,7 @@ class AuthorPolicy
      */
     public function delete(User $user, Author $author): bool
     {
-        return true;
+        return $user->role === "admin";
     }
 
     /**
@@ -53,7 +53,8 @@ class AuthorPolicy
      */
     public function restore(User $user, Author $author): bool
     {
-        return true;
+        return $user->role === "admin";
+
     }
 
     /**
@@ -61,6 +62,7 @@ class AuthorPolicy
      */
     public function forceDelete(User $user, Author $author): bool
     {
-        return true;
+        return $user->role === "admin";
+
     }
 }

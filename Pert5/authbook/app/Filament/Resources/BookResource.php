@@ -36,7 +36,9 @@ class BookResource extends Resource
                         Forms\Components\TextInput::make('title')
                             ->required()
                             ->maxLength(255),
-
+                        Forms\Components\TextInput::make('description')
+                            ->required()
+                            ->maxLength(255),
                         Forms\Components\Select::make('author_id')
                             ->relationship('author', 'name')
                             ->searchable()
@@ -56,6 +58,13 @@ class BookResource extends Resource
                             ->minValue(1000)
                             ->maxValue(date('Y'))
                             ->step(1),
+                        Forms\Components\Select::make('categories')
+                            ->label('Kategori Buku')
+                            ->relationship('categories', 'category')
+                            ->multiple()
+                            ->searchable()
+                            ->preload()
+                            ->required(),
 
                         Forms\Components\Select::make('status')
                             ->options([
@@ -87,6 +96,7 @@ class BookResource extends Resource
             ->columns([
                 Tables\Columns\ImageColumn::make('cover')
                     ->circular()
+                    ->disk("public")
                     ->defaultImageUrl(url('/images/default-book-cover.png')),
 
                 Tables\Columns\TextColumn::make('isbn')
@@ -99,7 +109,10 @@ class BookResource extends Resource
                     ->searchable()
                     ->sortable()
                     ->limit(50),
-
+                Tables\Columns\TextColumn::make('description')
+                    ->searchable()
+                    ->sortable()
+                    ->limit(50),
                 Tables\Columns\TextColumn::make('author.name')
                     ->searchable()
                     ->sortable(),
