@@ -276,3 +276,74 @@ Terdapat penambahan tabel baru yaitu categories, tabel ini berfungsi agar setiap
 2. Penambahan Kategori dan Deskripsi Buku
 ![alt text](./ImageLaprak/image-11.png)
 ![alt text](./ImageLaprak/image-12.png)
+
+# Update Versi 3.0.0
+## Pembuatan ERD dan Penjelasan Arsitektur Website
+### ERD (Entity Relationship Diagram)
+![alt text](./ImageLaprak/ERD-authbook.png)
+
+Webiste authbook mempunyai struktur dengan 5 table, ke 4 tabel tersebut saling memupunyai relasi sebagai berikut:
+<table>
+<thead>
+    <th>Tabel</th>
+    <th>Relasi</th>
+    <th>Penjelasan</th>
+</thead>
+<tbody>
+    <tr>
+    <td>Authors - Books</td>
+    <td>1 to N (One to Many)</td>
+    <td>Dalam relasi ini berarti 1 author dapat memiliki lebih dari 1 buku secara bersamaan</td>
+    <tr>
+    <tr>
+    <td>Books - Books_categories</td>
+    <td>N to N (Many to Many)</td>
+    <td>Dalam relasi ini berarti banyak buku dapat mempunyai banyak kategori secara bersamaan</td>
+    </tr>
+    <tr>
+    <td>Books_categories - Categories</td>
+    <td>N to N (Many to Many)</td>
+    <td>Dalam relasi ini berarti banyak kategori dapat mempunyai banyak buku secara bersamaan</td>
+    </tr>
+    <tr>
+    <td>Users</td>
+    <td>-</td>
+    <td>Tabel ini tidak mempunyai relasi dengan tabel manapun</td>
+    </tr>
+ </tbody>
+ </table>
+
+### Flow Aplikasi
+1. Request: Users merequest data setiap halaman dengan menggunakan HTTP URL
+2. Autoritas: Jika middleware mengizinkan user untuk mengakses halaman tertentu maka middleware akan memberikan akses ke halaman tersebut, namun jika tidak maka middleware akan menolaknya.
+3. Response: Response akan diberikan dari request-request data oleh users yang telah ter autorisasi.
+
+### Perbandingan Filament dengan Pendekatan Tradisional
+<table>
+<thead>
+    <th>Tipe</th>
+    <th>Pembuatan CRUD</th>
+    <th>Kelebihan</th>
+    <th>Kekurangan</th>
+    <th>Kapan digunakan?</th>
+</thead>
+<tbody>
+    <tr>
+    <td>Laravel Traditional</td>
+    <td>Dilakukan pada Controler/service dan dihubungkan ke Model</td>
+    <td>Pengembang mendapatkan kontrol sepenuhnya terhadap code dan desain dari web yang sedang dibuat</td>
+    <td>Memakan waktu pengembangan lebih lama</td>
+    <td>Jika mengembangkan website yang mempunyai skalabilitas sangat besar (ESS, Sistem Akademik)</td>
+    <tr>
+    <tr>
+    <td>Filament</td>
+    <td>Dilakukan sepenuhnya pada file Resource dan dihubungkan ke model</td>
+    <td>Pengembang dimudahkan dengan adanya component-component desain yang telah di sediakan oleh framework</td>
+    <td>Memakan waktu pembelajaran lebih lama untuk memahami kegunaan setiap masing-masing component</td>
+    <td>Jika ingin mengembangkan webiste dalam waktu singkat</td>
+    </tr>
+ </tbody>
+ </table>
+
+### Refleksi Pembelajaran
+Pada praktikum PBW ini di pelajari penggunaan dan penerapan framework Laravel, breeze, dan filament. Kesulitan dalam praktikum ini adalah banyaknya materi baru sehingga cukup banyak yang di pelajari tanpa mematangkan terlebih dahulu konsep MVC yang menjadi fundamental Laravel. Penulis berencana mengembangkan aplikasi SIM Service Elektronik dengan menggunakan arsitektur Laravel.
