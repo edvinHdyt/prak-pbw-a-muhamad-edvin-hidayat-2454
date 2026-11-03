@@ -34,7 +34,13 @@ Disusun Oleh:
 <b>Authbook</b> Merupakan aplikasi berbasis web yang dikembangkan untuk mempermudah proses pengelolaan koleksi buku dan informasi penulis. Proyek ini menggunakan arsitektur Laravel 12 sebagai framework utaman dan Filament 3.x untuk membangun panel administrasi yang praktis dan mudah digunakan.
 
 # Daftar Isi
-1. <a href="https://github.com/edvinHdyt/prak-pbw-a-muhamad-edvin-hidayat-2454/edit/main/Pert5/authbook#fitur-aplikasi"> Fitur Aplikasi </a>
+1. <a href="https://github.com/edvinHdyt/prak-pbw-a-muhamad-edvin-hidayat-2454/tree/main/Pert5/authbook#fitur-aplikasi"> Fitur Aplikasi </a>
+2. <a href="https://github.com/edvinHdyt/prak-pbw-a-muhamad-edvin-hidayat-2454/tree/main/Pert5/authbook#teknologi-yang-digunakan"> Teknologi yang digunakan </a>
+3. <a href="https://github.com/edvinHdyt/prak-pbw-a-muhamad-edvin-hidayat-2454/tree/main/Pert5/authbook#instalasi-proyek"> Instalasi Proyek </a>
+4. <a href="https://github.com/edvinHdyt/prak-pbw-a-muhamad-edvin-hidayat-2454/tree/main/Pert5/authbook#informasi-akun-pengguna"> Informasi Akun Pengguna </a>
+5. <a href="https://github.com/edvinHdyt/prak-pbw-a-muhamad-edvin-hidayat-2454/tree/main/Pert5/authbook#hasil-output"> Hasil Output </a>
+6. <a href="https://github.com/edvinHdyt/prak-pbw-a-muhamad-edvin-hidayat-2454/tree/main/Pert5/authbook#update-webiste"> Update webiste Pertemuan-7 </a>
+7. <a href="https://github.com/edvinHdyt/prak-pbw-a-muhamad-edvin-hidayat-2454/tree/main/Pert5/authbook#update-versi-300"> Update webiste Pertemuan-8 </a>
 
 # Fitur Aplikasi
 1. Halaman Autentikasi (Login dan Register)
